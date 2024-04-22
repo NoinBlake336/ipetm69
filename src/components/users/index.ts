@@ -1,17 +1,19 @@
-import {Router} from 'express';
+import {Request, Response, Router} from 'express';
 import { validateHandler } from '../../middlewares/validatehandler';
 import { getUserSchema } from './schema/index.schema';
-import { UserController } from './controller/index.controller';
+import { getOneUser,getUser } from './controller/index.controller';
 
 
-const controller = new UserController;
+
 
 const router = Router() ;
 
 router.get('/:id',
     validateHandler(getUserSchema,'params'),
-    controller.getOneUser
+    getOneUser
 );
+
+router.get('/',getUser);
 
 
 

@@ -27,6 +27,6 @@ UserSchema.set('toJSON',{
     transform:transformObject.json,
 });
 
-const UserModel: Model<IUser> = model<IUser>('User',UserSchema);
+const UserModel: Model<IUser> = model<IUser>('UserModel',UserSchema);
 
 export default UserModel;
