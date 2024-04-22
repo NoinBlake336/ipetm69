@@ -6,7 +6,7 @@ dotenv.config();
 
 const config = {
     port: process.env.PORT || 3000,
-    urlDb: process.env.URLBD || 'http://example.com',
+    urlDb: process.env.URLBD || 'mongodb+srv://noinblake-336:RNr2vebyd9K6EdZt@cluster0.xaxibxw.mongodb.net/?retryWrites=true&w=majority',
 }
 
 export default config;

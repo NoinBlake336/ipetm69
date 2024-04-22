@@ -9,6 +9,7 @@ export class UserController {
     async getOneUser(req:Request,res:Response,next:NextFunction):Promise<Object>{
         try {
             const {id} = req.params;
+            console.log(id)
             const findOne = services.findOneUser(id);
             return {findOne};
         } catch (error) {

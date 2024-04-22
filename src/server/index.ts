@@ -3,7 +3,7 @@ import config from '../config';
 import { connectDB } from '../db';
 import bodyParser from 'body-parser';
 import { boomErrorHandler, errorHandler, logErrors } from '../middlewares/error.handler';
-import { Router } from '../routers';
+import { router } from '../routers';
 
 
 
@@ -37,13 +37,13 @@ export class Server {
 
 
     router(): void{
-        Router(this.app);
+        router(this.app);
     }
 
 
     listen(): void{
         this.app.listen(config.port, ()=>{
-            console.log('Bienvenido al servidor')
+            console.log('Bienvenido al servidor',config.port)
         });
     }
 }

@@ -1,7 +1,7 @@
 import  express,{Express} from 'express';
-
-export const Router = (app:Express)=>{
+import userRouter from '../components/users';
+export const router = (app)=>{
     const router = express.Router();
-    app.use('/api/v2',router);
-    router.use('/users', )
+    router.use('/api/v2',router);
+    router.use('/users', userRouter);
 }
