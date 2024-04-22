@@ -5,7 +5,7 @@ import * as boom from '@hapi/boom';
 
 
 
-export const vaidateHandler = (schema,property:string) =>{
+export const validateHandler = (schema,property:string) =>{
     return (req:Request,res:Response,next)=>{
         const data = req[property];
         const {error} = schema.validate(data);
