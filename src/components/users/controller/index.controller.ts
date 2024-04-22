@@ -5,20 +5,20 @@ const services = new UserServices();
 
 
     
- export const getUser = async(req:Request,res:Response,next:NextFunction):Promise<Object> =>{
+ export const getUser = async(req:Request,res:Response,next):Promise<void> =>{
         try {
             const find = await services.findUser();
-            return {find};
+            res.json({find})
         } catch (error) {
             next(error);
         }
     }
 
-export const getOneUser = async(req:Request,res:Response,next:NextFunction):Promise<Object> => {
+export const getOneUser = async(req:Request,res:Response,next):Promise<void> => {
         try {
             const {id} = req.params;
             const findOne = await services.findOneUser(id);
-            return {findOne};
+            res.json({findOne})
         } catch (error) {
             next(error)
         }
