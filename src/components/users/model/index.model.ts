@@ -1,5 +1,5 @@
 import { Model, Schema, model } from "mongoose";
-import { IUser } from "../interfaces/index.interfaces";
+import { IUser } from "../interface/index.interfaces";
 import { transformObject } from "../../../middlewares/transform.object";
 
 
