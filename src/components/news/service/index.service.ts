@@ -7,7 +7,7 @@ const userService = new UserServices();
 
 export class NewsServices {
     async addNews (data,userId):Promise<Object>{
-        console.log(data)
+        
         
         
         const fullNews = {
@@ -19,7 +19,7 @@ export class NewsServices {
             date: Date(),
         }
 
-        // const addNews = await newsModel(fullNews);
+        const addNews = await newsModel(fullNews);
 
 
         return fullNews
