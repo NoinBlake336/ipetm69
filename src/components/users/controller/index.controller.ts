@@ -8,7 +8,7 @@ const services = new UserServices();
  export const getUser = async(req:Request,res:Response,next):Promise<void> =>{
         try {
             const find = await services.findUser();
-            res.json({find})
+            res.status(200).json({find});
         } catch (error) {
             next(error);
         }
@@ -18,8 +18,8 @@ export const getOneUser = async(req:Request,res:Response,next):Promise<void> => 
         try {
             const {id} = req.params;
             const findOne = await services.findOneUser(id);
-            res.json({findOne})
+            res.status(200).json({findOne});
         } catch (error) {
-            next(error)
+            next(error);
         }
     }

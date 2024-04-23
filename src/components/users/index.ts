@@ -15,12 +15,7 @@ router.get('/:id',
 
 router.get('/',getUser);
 
-router.post('/',
-    async (req,res,next) =>{
-        const body = req.body;
-        res.json(body)
-    }
-)
+
 
 
 

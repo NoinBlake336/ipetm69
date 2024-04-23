@@ -7,7 +7,7 @@ const password = Joi.string();
 
 
 export const getUserSchema = Joi.object({
-    id:id.required(),
+    id,
     username,
 });
 

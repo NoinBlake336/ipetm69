@@ -1,3 +1,4 @@
-1- Hacer Ruta user: X (Terminar inicio de rutaS)
+1- Hacer Ruta user: X (Terminar inicio de rutaS) V
 2- Hacer Ruta Recurso: X
 3- Hacer Ruta Noticias: X
+4- Terminar Joi News X

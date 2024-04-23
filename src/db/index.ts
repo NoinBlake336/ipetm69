@@ -8,7 +8,7 @@ dotenv.config();
 export const connectDB = async(): Promise<void> =>{
     try {
         const conn = await mongoose.connect(config.urlDb,{
-            dbName: 'pageCole',
+            dbName: 'PageCole',
         })
         console.log('mongo database is connected');
         process.on('SIGINT',(()=>{
