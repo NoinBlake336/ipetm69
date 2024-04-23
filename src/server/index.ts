@@ -4,7 +4,7 @@ import { connectDB } from '../db';
 import bodyParser from 'body-parser';
 import { boomErrorHandler, errorHandler, logErrors } from '../middlewares/error.handler';
 import userRouter from '../components/users';
-
+import newsRouter from '../components/news';
 
 
 
@@ -39,6 +39,7 @@ export class Server {
 
     router(): void{
         this.app.use('/users', userRouter);
+        this.app.use('/news', newsRouter );
     }
 
 

@@ -1,3 +1,4 @@
+import { StringSchemaDefinition } from "mongoose";
 
 export interface INews {
     user:Object,
@@ -5,5 +6,5 @@ export interface INews {
     description:string,
     image:string,
     enlace:string,
-    date:Date,
+    date:string,
 }
