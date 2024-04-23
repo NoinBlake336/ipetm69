@@ -9,23 +9,23 @@ const newsSchema = new Schema<INews>({
     user:{
         type:Schema.Types.ObjectId,
         ref:'UserModel',
-        require:true
+        required:true
     },
     title:{
         type:String,
-        require:false
+        required:false
     },
     description:{
         type:String,
-        require:false,
+        required:false,
     },
     image:{
         type:String,
-        require:false,
+        required:false,
     },
     enlace:{
         type:String,
-        require:false,
+        required:false,
     },
     date:Date
 });

@@ -12,10 +12,10 @@ const UserSchema = new Schema<IUser>({
         type:String,
         required:true,
     },
-    recources:{
+    recources:[{
         type:Schema.Types.ObjectId,
         ref:'RecourcesModel',
-    },
+    }],
     news:[{
         type:Schema.Types.ObjectId,
         ref:'NewsModel',
