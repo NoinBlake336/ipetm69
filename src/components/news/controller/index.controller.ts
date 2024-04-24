@@ -26,6 +26,7 @@ export const createNews = async(req:Request,res:Response,next):Promise<void> => 
         const addNews = await services.addNews(body,userId);
 
         res.status(200).json({addNews});
+        
     } catch (error) {
         next(error)
     }

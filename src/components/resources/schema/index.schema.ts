@@ -13,10 +13,10 @@ export const getResourceSchema = Joi.object({
 });
 
 export const createResourceSchema = Joi.object({
-    user:promps.user.required(),
-    title:promps.title.required(),
-    description:promps.description.required(),
-    image:promps.image.required(),    
+    user:promps.user,
+    title:promps.title,
+    description:promps.description,
+    image:promps.image    
 });
 
 export const updateResourceSchema = Joi.object({

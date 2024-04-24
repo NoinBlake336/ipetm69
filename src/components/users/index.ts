@@ -1,4 +1,4 @@
-import {Request, Response, Router} from 'express';
+import {Router} from 'express';
 import { validateHandler } from '../../middlewares/validatehandler';
 import { getUserSchema } from './schema/index.schema';
 import { getOneUser,getUser } from './controller/index.controller';

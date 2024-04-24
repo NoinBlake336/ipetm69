@@ -5,7 +5,10 @@ import bodyParser from 'body-parser';
 import { boomErrorHandler, errorHandler, logErrors } from '../middlewares/error.handler';
 import userRouter from '../components/users';
 import newsRouter from '../components/news';
-import resourceRouter from '../components/recources'
+import resourceRouter from '../components/resources';
+import authRouter from '../components/auth';
+import dashboardRouter from '../components/dashboard';
+import '../utils/auth';
 
 
 export class Server {
@@ -40,7 +43,9 @@ export class Server {
     router(): void{
         this.app.use('/users', userRouter);
         this.app.use('/news', newsRouter );
-        this.app.use('/recources',resourceRouter)
+        this.app.use('/recources',resourceRouter);
+        this.app.use('/auth', authRouter);
+        this.app.use('/dashboard', dashboardRouter)
     }
 
 

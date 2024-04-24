@@ -7,14 +7,15 @@ export class UserServices {
     async findUser(): Promise<Object> {
         const getUser = await userModel.find()
         .populate('news','-user')
-        // .populate('recources', '-user')
+        .populate('recources', '-user')
         return { getUser };
     };
 
     async findOneUser(id:string): Promise<Object> {
 
         const getOneUser = await userModel.findById(id)
-        .populate('news','-user');
+        .populate('news','-user')
+        .populate('recources','-user')
         if(!getOneUser){
             throw boom.badRequest('no user');
         }
@@ -23,7 +24,7 @@ export class UserServices {
     };
 
     async getUsername(username: string) {
-        const user = await userModel.find({
+        const user = await userModel.findOne({
             username: username,
         });
         if(!user){

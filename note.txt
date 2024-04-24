@@ -2,3 +2,8 @@
 2- Hacer Ruta Recurso: X
 3- Hacer Ruta Noticias: X
 4- Terminar Joi News X
+
+
+PORT = 3000
+URLDB = "mongodb+srv://noinblake-336:RNr2vebyd9K6EdZt@cluster0.xaxibxw.mongodb.net/?retryWrites=true&w=majority";
+SECRETKEY = "desarrolloWebEsmiPasion45552"
