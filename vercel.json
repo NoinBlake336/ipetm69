@@ -1,14 +1,14 @@
 {
   "version": 2,
   "builds": [
-    { "src": "./app.ts", "use": "@vercel/node" }
+      { 
+          "src":"app.ts",
+          "use": "@vercel/node"}
   ],
   "routes": [
-    { "src": "/users/(.*)", "dest": "/server/index.server.ts" },
-    { "src": "/news/(.*)", "dest": "/server/index.server.ts" },
-    { "src": "/resources/(.*)", "dest": "/server/index.server.ts" },
-    { "src": "/auth/(.*)", "dest": "/server/index.server.ts" },
-    { "src": "/dashboard/(.*)", "dest": "/server/index.server.ts" },
-    { "src": "/(.*)", "dest": "/server/index.server.ts" }
+      {
+          "src": "/(.*)",
+          "dest": "app.ts"            
+      }
   ]
-}
+} 
