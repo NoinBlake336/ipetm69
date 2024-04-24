@@ -1,4 +1,5 @@
 import express,{Express, Request, Response} from 'express';
+import cors from 'cors'
 import config from '../config';
 import { connectDB } from '../db';
 import bodyParser from 'body-parser';
@@ -30,7 +31,7 @@ export class Server {
     middlewares(){
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({extended:false}));
-
+        this.app.use(cors())
     };
 
     errorHandler(){
