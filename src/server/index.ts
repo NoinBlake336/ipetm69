@@ -1,4 +1,4 @@
-import express,{Express} from 'express';
+import express,{Express, Request, Response} from 'express';
 import config from '../config';
 import { connectDB } from '../db';
 import bodyParser from 'body-parser';
