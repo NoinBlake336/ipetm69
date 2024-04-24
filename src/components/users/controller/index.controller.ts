@@ -17,8 +17,8 @@ const services = new UserServices();
 export const getOneUser = async(req:Request,res:Response,next):Promise<void> => {
         try {
             const {id} = req.params;
-            const findOne = await services.findOneUser(id);
-            res.status(200).json({findOne});
+            const find = await services.findOneUser(id);
+            res.status(200).json({find});
         } catch (error) {
             next(error);
         }
