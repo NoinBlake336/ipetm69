@@ -9,6 +9,7 @@ import newsRouter from '../components/news';
 import resourceRouter from '../components/resources';
 import authRouter from '../components/auth';
 import dashboardRouter from '../components/dashboard';
+import docs from '../components/docs'
 import '../utils/auth';
 
 
@@ -46,7 +47,8 @@ export class Server {
         this.app.use('/news', newsRouter );
         this.app.use('/recources',resourceRouter);
         this.app.use('/auth', authRouter);
-        this.app.use('/dashboard', dashboardRouter)
+        this.app.use('/dashboard', dashboardRouter);
+        this.app.use('/', docs)
     }
 
 
