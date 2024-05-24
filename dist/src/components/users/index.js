@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const validatehandler_1 = require("../../middlewares/validatehandler");
+const index_schema_1 = require("./schema/index.schema");
+const index_controller_1 = require("./controller/index.controller");
+const router = (0, express_1.Router)();
+router.get('/:id', (0, validatehandler_1.validateHandler)(index_schema_1.getUserSchema, 'params'), index_controller_1.getOneUser);
+router.get('/', index_controller_1.getUser);
+exports.default = router;
